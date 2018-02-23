@@ -3821,7 +3821,7 @@ int radio::getOperatorResponse(int slotId,
         } else {
             char **resp = (char **) response;
             longName = convertCharPtrToHidlString(resp[0]);
-            shortName = convertCharPtrToHidlString(resp[0]);
+            shortName = convertCharPtrToHidlString(resp[1]);
             numeric = convertCharPtrToHidlString(resp[2]);
         }
         Return<void> retStatus = radioService[slotId]->mRadioResponse->getOperatorResponse(
